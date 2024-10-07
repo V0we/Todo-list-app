@@ -44,8 +44,10 @@ h1 {
     color: rgb(84, 172, 110);
     background-color: rgb(44, 44, 44);
     font-size: 1.2rem;
-    padding: .9rem;
+    padding: 1rem;
     font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
 }
 
 #addBtn:hover {
@@ -55,9 +57,77 @@ h1 {
 
 
 .taskList {
-    display: none;
+    display: block;
     background-color: rgb(212, 204, 178);
     padding: 1rem 2rem;
     border-radius: 20px;
 }
 
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: .3rem 0;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    align-items: baseline;
+    cursor: pointer;
+}
+
+
+li .fa-regular {
+    flex: 1;
+    font-size: 1rem;
+    
+}
+
+li .taskContent {
+    flex: 6;
+}
+
+li .fa-trash {
+    transition: .3s;
+}
+
+li .fa-trash:hover {
+    color: red;
+}
+
+li:hover .taskContent {
+    color: rgb(179, 122, 37);
+    transition: .3s;
+}
+
+.taskCompleted .taskContent {
+    color: rgb(100, 96, 96);
+    text-decoration: line-through;
+}
+
+.taskCompleted:hover .taskContent {
+    color: rgb(100, 96, 96);
+    text-decoration: line-through;
+}
+
+#clearContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#clearAll {
+    border: 0;
+    color: rgb(236, 96, 96);
+    background-color: rgb(44, 44, 44);
+    font-size: .8rem;
+    padding: .5rem;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+    margin-top: .6rem;
+    border-radius: 1em;
+}
+
+#clearAll:hover {
+    background-color:rgb(236, 96, 96);
+    color: rgb(44, 44, 44);
+}
